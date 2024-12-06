@@ -1,27 +1,27 @@
-# Pytorch NCCL Test
+# PyTorch NCCL Test
 
-This repository is used to check your cuda devices can communicate fine in PyTorch by using nccl library.
+This repository is used to verify if your CUDA devices can communicate correctly in PyTorch using the NCCL library.
 
-## Prerequisite
+## Prerequisites
 
-1. Please ensure you are installed nvidia driver for your device
-2. Check your device connection information
-    ```bash
-    nvidia-smi topo -m
-    ```
+1.	Ensure that the NVIDIA driver is installed for your device.
+2.	Check your device’s connection information:
 
-## Run the test
+    `nvidia-smi topo -m`
 
-1. modify `run.sh` to set the correct GPU number you want to test
-    ```NGPUS=<the number of gpu>```
-2. run the script
-    ```bash
-    bash run.sh
-    ```
+## Running the Test
+
+1.	Modify run.sh to set the desired number of GPUs to test:
+
+    `NGPUS=<number_of_gpus>`
 
 
-## Other Test
+2.	Run the script:
 
-if you are interesting in more test like bandwidth, you can use following repository:
+    `bash run.sh`
 
-1. https://github.com/NVIDIA/nccl-tests
+## Additional Tests
+
+If you are interested in more tests, such as bandwidth testing, you can use the following repository:
+
+1. [NVIDIA NCCL Tests](https://github.com/NVIDIA/nccl-tests)
