@@ -6,7 +6,7 @@ from argparse import ArgumentParser
 def setup(rank, world_size, device):
     os.environ['MASTER_ADDR'] = 'localhost'  # Use master node IP if multi-node
     os.environ['MASTER_PORT'] = '29526'     # Ensure this port is free
-    dist.init_process_group("nccl", rank=rank, world_size=world_size)
+    dist.init_process_group("nccl", rank=rank, world_size=world_size, device_id=device)
 
 def cleanup():
     dist.destroy_process_group()
